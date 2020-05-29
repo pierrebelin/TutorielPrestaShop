@@ -28,7 +28,9 @@ class MonModule extends Module
     {
         if (parent::install()
         && $this->registerHook('actionCustomerAccountAdd')
-        && $this->registerHook('displayProductAdditionalInfo')) {
+        && $this->registerHook('displayProductAdditionalInfo')
+        && $this->registerHook('displayMonMessage')
+        ) {
             return true;
         }
 
@@ -52,8 +54,13 @@ class MonModule extends Module
         $customer->save();
     }
 
-    public function hookDisplayProductAdditionalInfo()
+    public function hookDisplayProductAdditionalInfo($products)
     {
         return $this->display(__FILE__, 'views/templates/admin/monaffichage.tpl');
+    }
+
+    public function hookDisplayMonMessage()
+    {
+        return $this->display(__FILE__, 'views/templates/admin/monmessage.tpl');
     }
 }

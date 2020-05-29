@@ -1,9 +1,3 @@
-/**
- * File created: Saturday, 23rd May 2020
- * @author Pierre Belin (contact@pierrebelin.fr)
- * @copyright 2019-2020 Pierre Belin
- */
-
 <?php
 
 class Address extends AddressCore
@@ -18,6 +12,7 @@ class Address extends AddressCore
 
         // MON CODE A AJOUTÉ
         if (true) {
+            $a = 1;
             // FAIRE QUELQUECHOSE
         }
 
