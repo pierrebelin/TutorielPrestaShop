@@ -1,1 +1,1 @@
-<p>MON TEXTE !</p>
+<p>Meilleur rapport qualité / prix</p>
