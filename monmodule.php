@@ -19,8 +19,8 @@ class MonModule extends Module
 
         parent::__construct();
 
-        $this->displayName = $this->l('Mon module');
-        $this->description = $this->l('Description du module');
+        $this->displayName = $this->l('My module');
+        $this->description = $this->l('My description');
         $this->confirmUninstall = $this->l('Êtes-vous sûr de vouloir désinstaller ce module ?');
     }
 
@@ -51,6 +51,7 @@ class MonModule extends Module
         // newCustomer
         $customer = $params['newCustomer'];
         $customer->lastname = 'TestMonModule';
+        // $customer->lastname = $this->module->l('LastName');
         $customer->save();
     }
 
